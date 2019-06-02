@@ -1,0 +1,77 @@
+{
+	"info": {
+		"_postman_id": "e8cdb636-4253-4c20-8e92-bf720f65a33d",
+		"name": "Demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get_Weather_Data",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "21f8ad27-e556-4f6a-b80b-2acc268e27f8",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-RapidAPI-Host",
+						"value": "community-open-weather-map.p.rapidapi.com",
+						"type": "text"
+					},
+					{
+						"key": "X-RapidAPI-Key",
+						"value": "f31cc521bfmsh89287080c9f368bp1a65acjsn0b011606a583",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://community-open-weather-map.p.rapidapi.com/weather?callback=test&id=2172797&units=%22metric%22+or+%22imperial%22&mode=xml%2C+html&q=London%2Cuk",
+					"protocol": "https",
+					"host": [
+						"community-open-weather-map",
+						"p",
+						"rapidapi",
+						"com"
+					],
+					"path": [
+						"weather"
+					],
+					"query": [
+						{
+							"key": "callback",
+							"value": "test"
+						},
+						{
+							"key": "id",
+							"value": "2172797"
+						},
+						{
+							"key": "units",
+							"value": "%22metric%22+or+%22imperial%22"
+						},
+						{
+							"key": "mode",
+							"value": "xml%2C+html"
+						},
+						{
+							"key": "q",
+							"value": "London%2Cuk"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
