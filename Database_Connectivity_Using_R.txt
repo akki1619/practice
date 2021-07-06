@@ -1,0 +1,39 @@
+****************************Database Connectivity Info***********************************
+
+Remote Host : freedb.tech
+Port : 3306
+Database Name : freedbtech_PIBM
+Username : freedbtech_studentPIBM
+Password : student
+PhpMyAdmin (UI Interface) : https://freedb.tech/phpmyadmin/index.php
+
+***************************SQL for inserting records****************************************************** 
+
+INSERT INTO `Student_Name` (`Roll No`, `First Name`, `Last Name`, `Specialization`) VALUES ('', '', '', '')
+
+
+************************SQL for deleting records************************************************************
+
+Delete from Student_Name where  columnName=value;
+
+**************************Code for fetching data**********************************************************
+
+mysql_connect = dbConnect(MySQL(), user = 'freedbtech_studentPIBM', password = 'student', dbname = 'freedbtech_PIBM',  
+                          host = 'freedb.tech')  
+dbListTables(mysql_connect)  
+result = dbSendQuery(mysql_connect, "select * from Student_Name")
+data_frame = fetch(result, n = 2)
+print(data_frame)
+
+*************************Code for adding data to existing table**************************************************************
+
+mysql_connect = dbConnect(MySQL(), user = 'freedbtech_studentPIBM', password = 'student', dbname = 'freedbtech_PIBM',  
+                          host = 'freedb.tech')  
+
+dbSendQuery(mysql_connect, "INSERT INTO `Student_Name` (`Roll No`, `First Name`, `Last Name`, `Specialization`) VALUES ('', '', '', '')")
+result = dbSendQuery(mysql_connect, "select * from Student_Name")
+data_frame = fetch(result, n = 3)
+print(data_frame)
+
+***********************************************************************************************************
+
