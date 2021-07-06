@@ -24,7 +24,7 @@ Delete from Student_Name where  columnName=value;
 
 **************************Code for fetching data***************************************************************************************************************
 
-mysql_connect = dbConnect(MySQL(), user = 'freedbtech_studentPIBM', password = 'student', dbname = 'freedbtech_PIBM', host = 'freedb.tech')  
+mysql_connect = dbConnect(MySQL(), user = 'freedbtech_studentPIBM', password = '', dbname = 'freedbtech_PIBM', host = 'freedb.tech')  
 dbListTables(mysql_connect)  // display list of tables in database
 result = dbSendQuery(mysql_connect, "select * from Student_Name")
 data_frame = fetch(result, n = 2)  // n stands for numbers of rows fetched
@@ -32,7 +32,7 @@ print(data_frame)
 
 *************************Code for adding data to existing table************************************************************************************************
 
-mysql_connect = dbConnect(MySQL(), user = 'freedbtech_studentPIBM', password = 'student', dbname = 'freedbtech_PIBM', host = 'freedb.tech')  
+mysql_connect = dbConnect(MySQL(), user = 'freedbtech_studentPIBM', password = '', dbname = 'freedbtech_PIBM', host = 'freedb.tech')  
 dbSendQuery(mysql_connect, "INSERT INTO `Student_Name` (`Roll No`, `First Name`, `Last Name`, `Specialization`) VALUES ('', '', '', '')")
 result = dbSendQuery(mysql_connect, "select * from Student_Name")
 data_frame = fetch(result, n = 3)
