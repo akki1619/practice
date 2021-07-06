@@ -28,7 +28,7 @@ mysql_connect = dbConnect(MySQL(), user = 'freedbtech_studentPIBM', password = '
                           host = 'freedb.tech')  
 dbListTables(mysql_connect)  
 result = dbSendQuery(mysql_connect, "select * from Student_Name")
-data_frame = fetch(result, n = 2)
+data_frame = fetch(result, n = 2)  // n stands for numbers of rows fetched
 print(data_frame)
 
 *************************Code for adding data to existing table************************************************************************************************
