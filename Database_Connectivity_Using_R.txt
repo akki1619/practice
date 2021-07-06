@@ -4,8 +4,14 @@ Remote Host : freedb.tech
 Port : 3306
 Database Name : freedbtech_PIBM
 Username : freedbtech_studentPIBM
-Password : student
+Password : 
 PhpMyAdmin (UI Interface) : https://freedb.tech/phpmyadmin/index.php
+
+*****************Installing and Loading MySQL package (one time activity)*********************************************
+
+install.packages("RMySQL")  
+library("RMySQL")
+
 
 ***************************SQL for inserting records****************************************************** 
 
