@@ -1,4 +1,4 @@
-****************************Database Connectivity Info***********************************
+****************************Database Connectivity Info*************************************************************************************************
 
 Remote Host : freedb.tech
 Port : 3306
@@ -7,22 +7,22 @@ Username : freedbtech_studentPIBM
 Password : 
 PhpMyAdmin (UI Interface) : https://freedb.tech/phpmyadmin/index.php
 
-*****************Installing and Loading MySQL package (one time activity)*********************************************
+*****************Installing and Loading MySQL package (one time activity)******************************************************************************
 
 install.packages("RMySQL")  
 library("RMySQL")
 
 
-***************************SQL for inserting records****************************************************** 
+***************************SQL for inserting records********************************************************************************************************* 
 
 INSERT INTO `Student_Name` (`Roll No`, `First Name`, `Last Name`, `Specialization`) VALUES ('', '', '', '')
 
 
-************************SQL for deleting records************************************************************
+************************SQL for deleting records**************************************************************************************************************
 
 Delete from Student_Name where  columnName=value;
 
-**************************Code for fetching data**********************************************************
+**************************Code for fetching data***************************************************************************************************************
 
 mysql_connect = dbConnect(MySQL(), user = 'freedbtech_studentPIBM', password = 'student', dbname = 'freedbtech_PIBM',  
                           host = 'freedb.tech')  
@@ -31,7 +31,7 @@ result = dbSendQuery(mysql_connect, "select * from Student_Name")
 data_frame = fetch(result, n = 2)
 print(data_frame)
 
-*************************Code for adding data to existing table**************************************************************
+*************************Code for adding data to existing table************************************************************************************************
 
 mysql_connect = dbConnect(MySQL(), user = 'freedbtech_studentPIBM', password = 'student', dbname = 'freedbtech_PIBM',  
                           host = 'freedb.tech')  
@@ -41,5 +41,5 @@ result = dbSendQuery(mysql_connect, "select * from Student_Name")
 data_frame = fetch(result, n = 3)
 print(data_frame)
 
-***********************************************************************************************************
+*****************************************************************************************************************************************************************
 
